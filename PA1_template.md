@@ -18,7 +18,7 @@ Histogram
 daysteps<-aggregate(steps~date, data=activity, FUN=sum)
  barplot(daysteps$steps, xlab="date",ylab="steps")
 ```
-![plot1](png/plot1.png) 
+![plot1](png/plot1.PNG) 
 
 Mean
 ```
