@@ -39,7 +39,7 @@ library(ggplot2)
 interval<-aggregate(steps~interval, data=activity,FUN=mean)
 ggplot(data=interval, aes(x=interval, y=steps))+geom_line()+xlab("5min interval")+ylab("Avg.steps")
 ```
-
+![plot2](png/plot2.png) 
 Which one contains the max number of steps
 ```
 interval$interval[which.max(interval$steps)]
@@ -66,7 +66,7 @@ New histogram about the new dataset
 daysteps<-aggregate(steps~date, data=activity, FUN=sum)
 barplot(daysteps$steps, xlab="date",ylab="steps")
 ```
-
+![plot3](png/plot3.png) 
 Mean
 ```
 mean(daysteps$steps)
@@ -95,4 +95,4 @@ plot - compare weekend and weekday
 > new_average<-aggregate(steps~interval+new_datetype, data=activity, mean)
 > ggplot(new_average,aes(interval,steps))+geom_line()+facet_grid(new_datetype~.)+xlab("5min interval")+ylab("Avg.steps")
 ```
-
+![plot4](png/plot4.png) 
