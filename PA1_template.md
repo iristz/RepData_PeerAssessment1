@@ -64,6 +64,8 @@ New histogram about the new dataset
 daysteps<-aggregate(steps~date, data=activity, FUN=sum)
 barplot(daysteps$steps, xlab="date",ylab="steps")
 ```
+![Caption for the picture.](C:\Users\Tian\Documents\Cousera\repdata-data-activity\plot1)
+
 Mean
 ```
 mean(daysteps$steps)
